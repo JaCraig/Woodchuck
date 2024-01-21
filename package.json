@@ -1,0 +1,51 @@
+{
+  "name": "@jacraig/woodchuck",
+  "version": "0.1.0",
+  "description": "A simple logging library.",
+  "main": "lib/Logger.cjs.js",
+  "module": "lib/Logger.esm.js",
+  "browser": "lib/Logger.umd.min.js",
+  "types": "lib/declarations/Logger.d.ts",
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    ".": {
+      "import": "./lib/Logger.esm.js",
+      "require": "./lib/Logger.cjs.js"
+    },
+    "./Logger.umd.js": "./lib/Logger.umd.js",
+    "./Logger.umd.min.js": "./lib/Logger.umd.min.js"
+  },
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "pack": "npm pack",
+    "publish": "npm publish --access public",
+    "prepublish": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaCraig/Woodchuck.git"
+  },
+  "keywords": [
+    "logging",
+    "logger",
+    "log",
+    "utility",
+    "utilities"
+  ],
+  "author": "James Craig",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/JaCraig/Woodchuck/issues"
+  },
+  "homepage": "https://github.com/JaCraig/Woodchuck#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.9.4",
+    "typescript": "^5.3.3",
+    "tslib": "^2.6.2"
+  }
+}
