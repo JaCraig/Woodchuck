@@ -20,6 +20,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
+    "test": "",
     "pack": "npm pack",
     "publish": "npm publish --access public",
     "prepublish": "rollup -c"
