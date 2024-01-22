@@ -7,6 +7,9 @@ on:
   push:
     branches: [ "main" ]
 
+env:
+  GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
 permissions:
   contents: write
   pull-requests: write
@@ -42,11 +45,8 @@ jobs:
         name: dotnet-results-${{ matrix.node-version }}
         path: TestResults-${{ matrix.node-version }}
 
-    - name: Release with release-please
-      uses: google-github-actions/release-please-action@v4
-      with:
-        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        release-type: node
+    - name: Update versioning with semantic-release
+      uses: npx semantic-release
 
     - run: npm run pack --if-present
 

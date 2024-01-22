@@ -42,10 +42,14 @@
   },
   "homepage": "https://github.com/JaCraig/Woodchuck#readme",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.6",
     "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "rollup": "^4.9.4",
-    "typescript": "^5.3.3",
-    "tslib": "^2.6.2"
+    "semantic-release": "^23.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "release": {
+    "branches": ["main"]
   }
 }
