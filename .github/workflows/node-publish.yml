@@ -46,7 +46,7 @@ jobs:
         path: TestResults-${{ matrix.node-version }}
 
     - name: Update versioning with semantic-release
-      uses: npx semantic-release
+      run: npx semantic-release
 
     - run: npm run pack --if-present
 
