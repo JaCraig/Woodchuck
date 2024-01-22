@@ -49,9 +49,11 @@ jobs:
 
     - name: Update versioning with semantic-release
       run: npx semantic-release
-
-    - run: npm run pack --if-present
-
-    - run: npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPMTOKEN }}
+
+    # - run: npm run pack --if-present
+
+    # - run: npm publish --access public
+    #   env:
+    #     NODE_AUTH_TOKEN: ${{ secrets.NPMTOKEN }}
