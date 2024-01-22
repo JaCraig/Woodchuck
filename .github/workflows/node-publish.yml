@@ -51,9 +51,3 @@ jobs:
       run: npx semantic-release
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPMTOKEN }}
-
-    # - run: npm run pack --if-present
-
-    # - run: npm publish --access public
-    #   env:
-    #     NODE_AUTH_TOKEN: ${{ secrets.NPMTOKEN }}
