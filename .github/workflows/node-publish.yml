@@ -50,6 +50,14 @@ jobs:
     - name: Update versioning with semantic-release
       run: npx semantic-release
 
+    - name: Push changes to Github
+      uses: ad-m/github-push-action@v0.8.0
+      with:
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        branch: ${{ github.ref }}
+        force: true
+        tags: true
+
     - run: npm run pack --if-present
 
     - run: npm publish --access public
