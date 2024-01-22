@@ -9,7 +9,7 @@ on:
 
 env:
   GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-  NPMTOKEN: ${{ secrets.NPMTOKEN }}
+  NPM_TOKEN: ${{ secrets.NPMTOKEN }}
 
 permissions:
   contents: write
