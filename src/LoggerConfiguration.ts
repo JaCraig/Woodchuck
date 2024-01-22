@@ -64,7 +64,6 @@ export class LoggerConfiguration {
     // properties: The properties of the log event
     // exception: The exception of the log event
     public write(level: LogLevel, message: string, properties?: { [key: string]: any; }, exception?: Error): void {
-        let objectType = typeof properties;
         let currentEvent: LogEvent = {
             level: level,
             message: message,
