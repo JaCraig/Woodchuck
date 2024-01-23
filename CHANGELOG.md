@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/JaCraig/Woodchuck/compare/v1.0.3...v1.0.4) (2024-01-23)
+
+
+### Bug Fixes
+
+* modification to try to get typings working ([337e0f7](https://github.com/JaCraig/Woodchuck/commit/337e0f77426a764f3c5582176b349e2145386181))
+
 ## [1.0.3](https://github.com/JaCraig/Woodchuck/compare/v1.0.2...v1.0.3) (2024-01-22)
 
 
