@@ -1,6 +1,6 @@
 {
   "name": "@jacraig/woodchuck",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple logging library.",
   "main": "lib/Logger.cjs.js",
   "module": "lib/Logger.esm.js",
@@ -16,7 +16,7 @@
         "types": "./lib/declarations/Logger.d.ts"
       },
       "require": {
-        "default":"./lib/Logger.cjs.js",
+        "default": "./lib/Logger.cjs.js",
         "types": "./lib/declarations/Logger.d.ts"
       }
     },
