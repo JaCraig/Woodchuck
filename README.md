@@ -1,5 +1,7 @@
 # WoodChuck - Logging Library
 
+[![NPM Publish](https://github.com/JaCraig/Woodchuck/actions/workflows/node-publish.yml/badge.svg)](https://github.com/JaCraig/Woodchuck/actions/workflows/node-publish.yml)
+
 WoodChuck is a versatile logging library for TypeScript/JavaScript that simplifies the process of logging messages within your applications and is built with structured event data at its heart. It provides a flexible and extensible logging framework to help you track and understand the flow of your application.
 
 ## Features
