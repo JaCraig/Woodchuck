@@ -11,8 +11,14 @@
   ],
   "exports": {
     ".": {
-      "import": "./lib/Logger.esm.js",
-      "require": "./lib/Logger.cjs.js"
+      "import": {
+        "default": "./lib/Logger.esm.js",
+        "types": "./lib/declarations/Logger.d.ts"
+      },
+      "require": {
+        "default":"./lib/Logger.cjs.js",
+        "types": "./lib/declarations/Logger.d.ts"
+      }
     },
     "./Logger.umd.js": "./lib/Logger.umd.js",
     "./Logger.umd.min.js": "./lib/Logger.umd.min.js"
