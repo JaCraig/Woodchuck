@@ -7,8 +7,14 @@ WoodChuck is a versatile logging library for TypeScript/JavaScript that simplifi
 ## Features
 
 - **Easy Integration**: Simple setup for quick integration into your projects.
+
 - **Customizable Logging Levels**: Define and use different logging levels to categorize and filter messages.
+
 - **Extensible Plugins**: Extend functionality with plugins for various output formats and destinations.
+
+- **Structured Logging**: Log structured event data to make it easier to analyze and understand.
+
+- **Flexible Configuration**: Configure the logger with a fluent interface to customize the logging experience.
 
 ## Installation
 
@@ -48,3 +54,31 @@ Logger.fatal("This is a fatal message: {key}", { "key": "value" }, new Error("Th
 
 ```typescript
 
+Logger.configure()
+    .enrichWith(new UserAgentEnricher())
+    .enrichWith(new UrlEnricher())
+    .enrichWith(new CallerEnricher())
+    .formatUsing(new DefaultFormatter())
+    .minimumLevel("Information")
+    .writeTo(new ConsoleSink());
+
+```
+4. Or build your own plugins:
+
+```typescript
+
+import { LogEventEnricher, LogEvent } from '@jacraig/woodchuck';
+
+export class MyCustomPlugin implements LogEventEnricher {
+    public enrich(logEvent: LogEvent): void {
+        logEvent.properties["myProperty"] = "Something, something, something, dark side";
+    }
+}
+
+```
+
+# Contributing
+If you'd like to contribute to WoodChuck, please follow our [contribution guidelines](https://github.com/JaCraig/Woodchuck/blob/main/CONTRIBUTING.md).
+
+# License
+WoodChuck is licensed under the [Apache 2 License](https://github.com/JaCraig/Woodchuck/blob/main/LICENSE).
