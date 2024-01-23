@@ -27,7 +27,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
@@ -49,9 +49,5 @@ jobs:
 
     - name: Update versioning with semantic-release
       run: npx semantic-release
-
-    - run: npm run pack --if-present
-
-    - run: npm publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPMTOKEN }}
