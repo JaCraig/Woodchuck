@@ -12,6 +12,8 @@ import { MinimumLevelLogFilter } from "./MinimumLevelLogFilter";
 import { CallerEnricher } from "./CallerEnricher";
 import { UserAgentEnricher } from "./UserAgentEnricher";
 import { UrlEnricher } from "./UrlEnricher";
+import { BatchedSink } from "./BatchedSink";
+import { BatchedSinkOptions } from "./BatchedSinkOptions";
 
 declare module globalThis {
     // The global LoggerConfiguration
@@ -87,4 +89,4 @@ class Logger {
     }
 }
 
-export { Logger, LogLevel, LogEvent, LogEventEnricher, LogFilter, OutputFormatter, DefaultFormatter, LogSink, ConsoleSink, LogSinkPipeline, LoggerConfiguration, UrlEnricher, UserAgentEnricher, CallerEnricher, MinimumLevelLogFilter };
+export { Logger, LogLevel, LogEvent, LogEventEnricher, LogFilter, OutputFormatter, DefaultFormatter, LogSink, ConsoleSink, LogSinkPipeline, LoggerConfiguration, UrlEnricher, UserAgentEnricher, CallerEnricher, MinimumLevelLogFilter, BatchedSink, BatchedSinkOptions };
