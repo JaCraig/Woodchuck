@@ -9,10 +9,12 @@ export default [
         file: 'lib/Logger.cjs.js', // CommonJS format for Node.js
         format: 'cjs',
         exports: 'named',
+        sourcemap: true
       },
       {
         file: 'lib/Logger.esm.js', // ES module format for modern browsers and bundlers
         format: 'esm',
+        sourcemap: true
       },
     ],
     plugins: [typescript()],
@@ -24,6 +26,7 @@ export default [
       format: 'umd',
       name: 'woodchuck', // Global variable name
       exports: 'named',
+      sourcemap: true
     },
     plugins: [typescript()],
   },
@@ -34,6 +37,7 @@ export default [
       format: 'umd',
       name: 'woodchuck', // Global variable name
       exports: 'named',
+      sourcemap: true
     },
     plugins: [typescript(),terser()],
   },
