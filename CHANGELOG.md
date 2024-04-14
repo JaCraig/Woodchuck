@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/JaCraig/Woodchuck/compare/v1.1.0...v1.1.1) (2024-04-14)
+
+
+### Bug Fixes
+
+* Package updates ([79e7a7d](https://github.com/JaCraig/Woodchuck/commit/79e7a7d47eec658f4ce10aa5ef5d61cf7072625c))
+
 # [1.1.0](https://github.com/JaCraig/Woodchuck/compare/v1.0.4...v1.1.0) (2024-03-11)
 
 
