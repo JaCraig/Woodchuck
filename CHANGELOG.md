@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/JaCraig/Woodchuck/compare/v1.1.1...v1.1.2) (2024-10-28)
+
+
+### Bug Fixes
+
+* Fix build issue with TypeScript rollup task ([9de9787](https://github.com/JaCraig/Woodchuck/commit/9de97875a42169c8cdbb12e3a65ea5b3ad697d73))
+
 ## [1.1.1](https://github.com/JaCraig/Woodchuck/compare/v1.1.0...v1.1.1) (2024-04-14)
 
 
