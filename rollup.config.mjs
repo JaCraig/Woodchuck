@@ -17,7 +17,7 @@ export default [
         sourcemap: true
       },
     ],
-    plugins: [typescript()],
+    plugins: [typescript({ declarationDir: 'lib' })],
   },
   {
     input: 'src/Logger.ts',
@@ -28,7 +28,7 @@ export default [
       exports: 'named',
       sourcemap: true
     },
-    plugins: [typescript()],
+    plugins: [typescript({ declarationDir: 'lib' })],
   },
   {
     input: 'src/Logger.ts',
@@ -39,6 +39,6 @@ export default [
       exports: 'named',
       sourcemap: true
     },
-    plugins: [typescript(),terser()],
+    plugins: [typescript({ declarationDir: 'lib' }), terser()],
   },
 ];
