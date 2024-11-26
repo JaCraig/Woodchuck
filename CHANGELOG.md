@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/JaCraig/Woodchuck/compare/v1.1.2...v1.1.3) (2024-11-26)
+
+
+### Bug Fixes
+
+* bump rollup from 4.27.3 to 4.27.4 ([c1007eb](https://github.com/JaCraig/Woodchuck/commit/c1007eb203d0db5e18d3a16c052a465f806775fc))
+* bump typescript from 5.6.3 to 5.7.2 ([6e83a27](https://github.com/JaCraig/Woodchuck/commit/6e83a27b2aa241ea7b3a6b54cf194b616d10e240))
+* downgrade typescript from 5.7.2 to 5.6.3 in package-lock.json ([3dbbf50](https://github.com/JaCraig/Woodchuck/commit/3dbbf50573056647efa43632ad07f4837135f5af))
+
 ## [1.1.2](https://github.com/JaCraig/Woodchuck/compare/v1.1.1...v1.1.2) (2024-10-28)
 
 
