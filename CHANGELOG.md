@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/JaCraig/Woodchuck/compare/v1.1.3...v1.1.4) (2024-12-02)
+
+
+### Bug Fixes
+
+* bump typedoc from 0.26.11 to 0.27.2 ([a5d5d16](https://github.com/JaCraig/Woodchuck/commit/a5d5d16acec3ee13970d36265a6eae04a5c1b8fe))
+* bump typescript from 5.6.3 to 5.7.2 ([8b09da2](https://github.com/JaCraig/Woodchuck/commit/8b09da22a797ee6ea2ae3a1f448d31d8185fd53e))
+
 ## [1.1.3](https://github.com/JaCraig/Woodchuck/compare/v1.1.2...v1.1.3) (2024-11-26)
 
 
