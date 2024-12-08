@@ -6,6 +6,8 @@ export interface LogEvent {
     timestamp: Date;
     // The log level
     level: LogLevel;
+    // The log entry's ID
+    id: string;
     // The message
     message: string;
     // The exception

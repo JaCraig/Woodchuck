@@ -10,6 +10,21 @@ export class BatchedSink implements LogSink {
         this.options = options;
         this.timer = setInterval(() => this.flush(), this.options.maxWaitTime);
         this.buffer = <LogEvent[]>JSON.parse(this.options.storage.getItem("logBuffer") || "[]");
+
+        if(this.isBrowser()) {
+            window.addEventListener("beforeunload", () => this.flush());
+            document.addEventListener("visibilitychange", () => {
+                if(document.visibilityState !== "hidden") {
+                    return;
+                }
+                this.flush();
+            });
+        }
+    }
+
+    // Is this running in a browser?
+    private isBrowser(): boolean {
+        return typeof window !=="undefined";
     }
 
     // The buffer of log events

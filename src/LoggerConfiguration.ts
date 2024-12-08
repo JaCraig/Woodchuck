@@ -70,8 +70,22 @@ export class LoggerConfiguration {
             properties: {},
             exception: exception,
             timestamp: new Date(),
+            id: this.generateId(),
             args: properties
         };
         this.pipelines.forEach(pipeline => pipeline.process(currentEvent));
+    }
+
+    // Generates a guid in crypto.randomUUID format. If crypto not available fall back to Math.Random.
+    private generateId(): string {
+        if(typeof crypto !== "undefined") {
+            return crypto.randomUUID();
+        }
+        // Go to fall back
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+            let r = Math.random() * 16 | 0;
+            let v = c === "x" ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
     }
 }

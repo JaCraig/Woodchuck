@@ -14,8 +14,11 @@ import { UserAgentEnricher } from "./UserAgentEnricher";
 import { UrlEnricher } from "./UrlEnricher";
 import { BatchedSink } from "./BatchedSink";
 import { BatchedSinkOptions } from "./BatchedSinkOptions";
+import { LanguageEnricher } from "./LanguageEnricher";
+import { PageEnricher } from "./PageEnricher";
+import { CustomEnricher } from "./CustomEnricher";
 
-declare module globalThis {
+declare namespace globalThis {
     // The global LoggerConfiguration
     var LoggerConfiguration: LoggerConfiguration;
 }
@@ -89,4 +92,4 @@ class Logger {
     }
 }
 
-export { Logger, LogLevel, LogEvent, LogEventEnricher, LogFilter, OutputFormatter, DefaultFormatter, LogSink, ConsoleSink, LogSinkPipeline, LoggerConfiguration, UrlEnricher, UserAgentEnricher, CallerEnricher, MinimumLevelLogFilter, BatchedSink, BatchedSinkOptions };
+export { Logger, LogLevel, LogEvent, LogEventEnricher, LogFilter, OutputFormatter, DefaultFormatter, LogSink, ConsoleSink, LogSinkPipeline, LoggerConfiguration, UrlEnricher, UserAgentEnricher, CallerEnricher, MinimumLevelLogFilter, BatchedSink, BatchedSinkOptions, LanguageEnricher, PageEnricher, CustomEnricher };

@@ -6,6 +6,7 @@ export class DefaultFormatter implements OutputFormatter {
     // Creates a new default log output formatter
     // outputFormat: The output format to use when formatting log events (defaults to "{Timestamp}: [{Level}]: {Message}{Exception}")
     // The following placeholders can be used in the output format:
+    // {Id}: The ID of the log event
     // {Timestamp}: The timestamp of the log event
     // {Level}: The log level of the log event
     // {Message}: The message of the log event
@@ -23,7 +24,9 @@ export class DefaultFormatter implements OutputFormatter {
     // Returns the formatted log event
     public format(event: LogEvent): string {
         return this.outputFormat.replace(/{(\w+)}/g, (match, propertyName) => {
-            if (propertyName === "Timestamp") {
+            if (propertyName === "Id") {
+                return event.id;
+            } else if (propertyName === "Timestamp") {
                 return event.timestamp.toISOString();
             } else if (propertyName === "Level") {
                 return event.level;
