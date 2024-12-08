@@ -1,3 +1,27 @@
+## [1.1.5](https://github.com/JaCraig/Woodchuck/compare/v1.1.4...v1.1.5) (2024-12-02)
+
+
+### Bug Fixes
+
+* bump rollup from 4.27.4 to 4.28.0 ([9c6d435](https://github.com/JaCraig/Woodchuck/commit/9c6d4359363b2b32ba9385ea04e930cf7715d0a5))
+
+## [1.1.4](https://github.com/JaCraig/Woodchuck/compare/v1.1.3...v1.1.4) (2024-12-02)
+
+
+### Bug Fixes
+
+* bump typedoc from 0.26.11 to 0.27.2 ([a5d5d16](https://github.com/JaCraig/Woodchuck/commit/a5d5d16acec3ee13970d36265a6eae04a5c1b8fe))
+* bump typescript from 5.6.3 to 5.7.2 ([8b09da2](https://github.com/JaCraig/Woodchuck/commit/8b09da22a797ee6ea2ae3a1f448d31d8185fd53e))
+
+## [1.1.3](https://github.com/JaCraig/Woodchuck/compare/v1.1.2...v1.1.3) (2024-11-26)
+
+
+### Bug Fixes
+
+* bump rollup from 4.27.3 to 4.27.4 ([c1007eb](https://github.com/JaCraig/Woodchuck/commit/c1007eb203d0db5e18d3a16c052a465f806775fc))
+* bump typescript from 5.6.3 to 5.7.2 ([6e83a27](https://github.com/JaCraig/Woodchuck/commit/6e83a27b2aa241ea7b3a6b54cf194b616d10e240))
+* downgrade typescript from 5.7.2 to 5.6.3 in package-lock.json ([3dbbf50](https://github.com/JaCraig/Woodchuck/commit/3dbbf50573056647efa43632ad07f4837135f5af))
+
 ## [1.1.2](https://github.com/JaCraig/Woodchuck/compare/v1.1.1...v1.1.2) (2024-10-28)
 
 
