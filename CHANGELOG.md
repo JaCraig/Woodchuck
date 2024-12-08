@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/JaCraig/Woodchuck/compare/v1.1.5...v1.2.0) (2024-12-08)
+
+
+### Features
+
+* add custom enrichers for log events and enhance logging functionality ([d8dd598](https://github.com/JaCraig/Woodchuck/commit/d8dd5984885ff95f0ce3775fc6b7650d08fa16ba))
+
 ## [1.1.5](https://github.com/JaCraig/Woodchuck/compare/v1.1.4...v1.1.5) (2024-12-02)
 
 
