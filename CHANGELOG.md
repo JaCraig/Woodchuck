@@ -1,3 +1,12 @@
+## [1.2.3](https://github.com/JaCraig/Woodchuck/compare/v1.2.2...v1.2.3) (2024-12-23)
+
+
+### Bug Fixes
+
+* bump @rollup/plugin-typescript from 12.1.1 to 12.1.2 ([343b73c](https://github.com/JaCraig/Woodchuck/commit/343b73c1daf617efaf181efa4ec67b16ce11a96f))
+* bump rollup from 4.28.1 to 4.29.1 ([a03f35d](https://github.com/JaCraig/Woodchuck/commit/a03f35d46128bd9c10ebbf957c8e93391b546e86))
+* bump typedoc from 0.27.4 to 0.27.5 ([9fc3501](https://github.com/JaCraig/Woodchuck/commit/9fc350143f899dcbab1a88f582fbe0ace1ed3d55))
+
 ## [1.2.2](https://github.com/JaCraig/Woodchuck/compare/v1.2.1...v1.2.2) (2024-12-09)
 
 
