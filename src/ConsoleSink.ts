@@ -24,9 +24,15 @@ export class ConsoleSink implements LogSink {
     public write(event: LogEvent): void {
         let displayInlineArgs = (event.args && (typeof event.args != "object"));
         let displayTableArgs = (event.args && (typeof event.args == "object"));
+        if(displayTableArgs) {
+            let shortenedMessage = event.message.length > 200 ? event.message.substring(0, 200) + "..." : event.message;
+            shortenedMessage = shortenedMessage.replace(/(\r\n|\n|\r)/gm, " ");
+            console.groupCollapsed(shortenedMessage);
+        }
         this.consoleMethods[event.level]("%c" + event.message, this.styles[event.level], displayInlineArgs ? event.args : "");
         if (displayTableArgs) {
             console.table(event.args);
+            console.groupEnd();
         }
     }
 }
