@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/JaCraig/Woodchuck/compare/v1.2.8...v1.2.9) (2025-02-03)
+
+
+### Bug Fixes
+
+* **ConsoleSink:** improve logging for object arguments ([88ebb91](https://github.com/JaCraig/Woodchuck/commit/88ebb913737a3b69a1f53773acec243ab6ad1d71))
+
 ## [1.2.8](https://github.com/JaCraig/Woodchuck/compare/v1.2.7...v1.2.8) (2025-01-27)
 
 
