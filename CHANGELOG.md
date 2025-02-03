@@ -1,3 +1,10 @@
+## [1.2.10](https://github.com/JaCraig/Woodchuck/compare/v1.2.9...v1.2.10) (2025-02-03)
+
+
+### Bug Fixes
+
+* bump rollup from 4.32.0 to 4.34.1 ([ca18ded](https://github.com/JaCraig/Woodchuck/commit/ca18ded978ea845d82df592634bcdd5ef25ea528))
+
 ## [1.2.9](https://github.com/JaCraig/Woodchuck/compare/v1.2.8...v1.2.9) (2025-02-03)
 
 
