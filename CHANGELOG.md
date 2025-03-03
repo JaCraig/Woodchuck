@@ -1,3 +1,12 @@
+## [1.2.13](https://github.com/JaCraig/Woodchuck/compare/v1.2.12...v1.2.13) (2025-03-03)
+
+
+### Bug Fixes
+
+* bump rollup from 4.34.8 to 4.34.9 ([81b4ce1](https://github.com/JaCraig/Woodchuck/commit/81b4ce1226209d7b99c015149dcc02643813e121))
+* bump typedoc from 0.27.7 to 0.27.9 ([9135c64](https://github.com/JaCraig/Woodchuck/commit/9135c64e82c4bfbbc54b7655d5ebd05c3a3facb9))
+* bump typescript from 5.7.3 to 5.8.2 ([ba60f0f](https://github.com/JaCraig/Woodchuck/commit/ba60f0f67e08e076d6d340e134c15a9db7bc3b51))
+
 ## [1.2.12](https://github.com/JaCraig/Woodchuck/compare/v1.2.11...v1.2.12) (2025-02-17)
 
 
