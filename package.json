@@ -1,6 +1,6 @@
 {
   "name": "@jacraig/woodchuck",
-  "version": "1.2.14",
+  "version": "1.2.15",
   "description": "A simple logging library.",
   "main": "lib/Logger.cjs.js",
   "module": "lib/Logger.esm.js",
