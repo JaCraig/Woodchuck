@@ -1,3 +1,10 @@
+## [1.2.22](https://github.com/JaCraig/Woodchuck/compare/v1.2.21...v1.2.22) (2025-04-07)
+
+
+### Bug Fixes
+
+* bump typescript from 5.8.2 to 5.8.3 ([16c7f50](https://github.com/JaCraig/Woodchuck/commit/16c7f50478b18532a8e1754a38a122bc72224c8b))
+
 ## [1.2.21](https://github.com/JaCraig/Woodchuck/compare/v1.2.20...v1.2.21) (2025-04-07)
 
 
