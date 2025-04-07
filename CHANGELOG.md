@@ -1,3 +1,10 @@
+## [1.2.21](https://github.com/JaCraig/Woodchuck/compare/v1.2.20...v1.2.21) (2025-04-07)
+
+
+### Bug Fixes
+
+* bump typedoc from 0.28.1 to 0.28.2 ([5a38141](https://github.com/JaCraig/Woodchuck/commit/5a381410ffd41dd6dcb44a227aa1ccba1aca76cd))
+
 ## [1.2.20](https://github.com/JaCraig/Woodchuck/compare/v1.2.19...v1.2.20) (2025-04-07)
 
 
