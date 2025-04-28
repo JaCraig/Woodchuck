@@ -1,3 +1,10 @@
+## [1.2.25](https://github.com/JaCraig/Woodchuck/compare/v1.2.24...v1.2.25) (2025-04-28)
+
+
+### Bug Fixes
+
+* bump @semantic-release/github from 11.0.1 to 11.0.2 ([f8b10ce](https://github.com/JaCraig/Woodchuck/commit/f8b10ce051b2a3baa8bad799c106a6c0b9b954fb))
+
 ## [1.2.24](https://github.com/JaCraig/Woodchuck/compare/v1.2.23...v1.2.24) (2025-04-21)
 
 
