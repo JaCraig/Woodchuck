@@ -1,3 +1,12 @@
+## [1.2.31](https://github.com/JaCraig/Woodchuck/compare/v1.2.30...v1.2.31) (2025-05-26)
+
+
+### Bug Fixes
+
+* bump @semantic-release/github from 11.0.2 to 11.0.3 ([d92b19a](https://github.com/JaCraig/Woodchuck/commit/d92b19a3942a920bb5c4f2fde5279dbc7a30a419))
+* bump rollup from 4.41.0 to 4.41.1 ([516e17c](https://github.com/JaCraig/Woodchuck/commit/516e17c1aa08c81c512bf74434ad2497ad9d7343))
+* bump typedoc from 0.28.4 to 0.28.5 ([907a910](https://github.com/JaCraig/Woodchuck/commit/907a9100831d62959c1d48400be252b32e2dbe89))
+
 ## [1.2.30](https://github.com/JaCraig/Woodchuck/compare/v1.2.29...v1.2.30) (2025-05-19)
 
 
