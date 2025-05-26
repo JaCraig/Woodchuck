@@ -1,3 +1,10 @@
+## [1.2.32](https://github.com/JaCraig/Woodchuck/compare/v1.2.31...v1.2.32) (2025-05-26)
+
+
+### Bug Fixes
+
+* bump semantic-release from 24.2.4 to 24.2.5 ([fb2dd09](https://github.com/JaCraig/Woodchuck/commit/fb2dd09accd5f793c28c3756897d41994018ebd5))
+
 ## [1.2.31](https://github.com/JaCraig/Woodchuck/compare/v1.2.30...v1.2.31) (2025-05-26)
 
 
