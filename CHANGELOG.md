@@ -1,3 +1,10 @@
+## [1.2.36](https://github.com/JaCraig/Woodchuck/compare/v1.2.35...v1.2.36) (2025-06-23)
+
+
+### Bug Fixes
+
+* bump @rollup/plugin-typescript from 12.1.2 to 12.1.3 ([644ab40](https://github.com/JaCraig/Woodchuck/commit/644ab40afcbf72dd39af2a1865b9ed4a15947390))
+
 ## [1.2.35](https://github.com/JaCraig/Woodchuck/compare/v1.2.34...v1.2.35) (2025-06-23)
 
 
