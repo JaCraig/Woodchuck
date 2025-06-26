@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/JaCraig/Woodchuck/compare/v1.2.36...v1.3.0) (2025-06-26)
+
+
+### Bug Fixes
+
+* **ConsoleSink:** improve console method handling and error management ([b873774](https://github.com/JaCraig/Woodchuck/commit/b873774f2ec4a72155b6f18e44989c71f8065cbd))
+* **log-sink-pipeline:** update filter logic and add devcontainer configuration ([0686793](https://github.com/JaCraig/Woodchuck/commit/0686793951ccc536e50cb7161f9b2f1e9d6806a6))
+* **tests:** implement BatchedSink, etc. tests ([c7e185d](https://github.com/JaCraig/Woodchuck/commit/c7e185d660297ba91d4515ba910b7cbb382f6721))
+
+
+### Features
+
+* **testing:** add Jest testing framework and initial test cases ([3bea777](https://github.com/JaCraig/Woodchuck/commit/3bea77744e5ea50517e3d773246ff84187e1d2e5))
+
 ## [1.2.36](https://github.com/JaCraig/Woodchuck/compare/v1.2.35...v1.2.36) (2025-06-23)
 
 
