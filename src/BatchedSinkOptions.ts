@@ -1,6 +1,15 @@
 import { InMemoryStorage } from "./InMemoryStorage";
 
-// BatchedSink Options class
+/**
+ * BatchedSinkOptions configures the behavior of BatchedSink.
+ *
+ * Allows setting the maximum batch size, flush interval, and storage backend (localStorage or in-memory).
+ *
+ * Example usage:
+ *   const options = new BatchedSinkOptions();
+ *   options.maxBatchSize = 20;
+ *   options.maxWaitTime = 1000;
+ */
 export class BatchedSinkOptions {
   // The maximum number of log events to buffer before writing them to the sink (default is 10)
   public maxBatchSize: number = 10;
