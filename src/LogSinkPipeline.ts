@@ -4,10 +4,10 @@ import { LogEvent } from "./LogEvent";
 import { LogEventEnricher } from "./LogEventEnricher";
 import { LogFilter } from "./LogFilter";
 import { LogLevel } from "./LogLevel";
-import { MinimumLevelLogFilter } from "./MinimumLevelLogFilter";
-import { OutputFormatter } from "./OutputFormatter";
 import { LogSink } from "./LogSink";
 import { LoggerConfiguration } from "./LoggerConfiguration";
+import { MinimumLevelLogFilter } from "./MinimumLevelLogFilter";
+import { OutputFormatter } from "./OutputFormatter";
 
 // The pipline for a log sink that can be used to add filters, formatters and enrichers
 // The pipeline is used to process log events before they are written to the sink
@@ -74,7 +74,7 @@ export class LogSinkPipeline {
         this.formatter ??= new DefaultFormatter();
         this.sink ??= new ConsoleSink();
         let eventCopy: LogEvent = Object.assign({}, event) as LogEvent;
-        if (!this.filters.some(filter => filter.filter(eventCopy))) {
+        if (!this.filters.every(filter => filter.filter(eventCopy))) {
             return;
         }
         this.enrichers.forEach(enricher => enricher.enrich(eventCopy));
