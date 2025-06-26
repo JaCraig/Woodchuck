@@ -23,20 +23,28 @@ export class DefaultFormatter implements OutputFormatter {
     // event: The log event to format into a string
     // Returns the formatted log event
     public format(event: LogEvent): string {
-        return this.outputFormat.replace(/{(\w+)}/g, (match, propertyName) => {
-            if (propertyName === "Id") {
-                return event.id;
-            } else if (propertyName === "Timestamp") {
-                return event.timestamp.toISOString();
-            } else if (propertyName === "Level") {
-                return event.level;
-            } else if (propertyName === "Message") {
-                return event.message;
-            } else if (propertyName === "Exception") {
-                return event.exception ? "\n" + event.exception.stack : "";
-            } else {
-                return event.properties[propertyName];
+        // Cache the regex for performance
+        const formatRegex = DefaultFormatter.formatRegex;
+        return this.outputFormat.replace(formatRegex, (match, propertyName) => {
+            switch (propertyName) {
+                case "Id":
+                    return event.id;
+                case "Timestamp":
+                    return event.timestamp.toISOString();
+                case "Level":
+                    return event.level;
+                case "Message":
+                    return event.message;
+                case "Exception":
+                    return event.exception ? "\n" + event.exception.stack : "";
+                default:
+                    return event.properties && event.properties[propertyName] !== undefined
+                        ? String(event.properties[propertyName])
+                        : "";
             }
         });
     }
+
+    // Cache the regex as a static property
+    private static formatRegex = /{(\w+)}/g;
 }

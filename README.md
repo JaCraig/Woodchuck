@@ -7,13 +7,9 @@ WoodChuck is a versatile logging library for TypeScript/JavaScript that simplifi
 ## Features
 
 - **Easy Integration**: Simple setup for quick integration into your projects.
-
 - **Customizable Logging Levels**: Define and use different logging levels to categorize and filter messages.
-
 - **Extensible Plugins**: Extend functionality with plugins for various output formats and destinations.
-
 - **Structured Logging**: Log structured event data to make it easier to analyze and understand.
-
 - **Flexible Configuration**: Configure the logger with a fluent interface to customize the logging experience.
 
 ## Installation
@@ -27,58 +23,116 @@ npm i @jacraig/woodchuck
 1. Configure the logger with a sink to output to.
 
 ```typescript
+import { Logger, ConsoleSink } from "@jacraig/woodchuck";
 
-import { Logger, ConsoleSink } from '@jacraig/woodchuck';
-
-Logger.configure()
-    .minimumLevel("Information")
-    .writeTo(new ConsoleSink())
-    .build();
-
+Logger.configure().minimumLevel("Information").writeTo(new ConsoleSink());
 ```
 
 2. Log messages with different levels:
 
 ```typescript
-
-Logger.verbose("This is a verbose message: {key}", { "key": "value" });
-Logger.debug("This is a debug message: {key}", { "key": "value" });
-Logger.information("This is an information message: {key}", { "key": "value" });
-Logger.warning("This is a warning message: {key}", { "key": "value" });
-Logger.error("This is an error message: {key}", { "key": "value" }, new Error("This is an error"));
-Logger.fatal("This is a fatal message: {key}", { "key": "value" }, new Error("This is a fatal error"));
-
+Logger.verbose("This is a verbose message: {key}", { key: "value" });
+Logger.debug("This is a debug message: {key}", { key: "value" });
+Logger.information("This is an information message: {key}", { key: "value" });
+Logger.warning("This is a warning message: {key}", { key: "value" });
+Logger.error(
+  "This is an error message: {key}",
+  { key: "value" },
+  new Error("This is an error")
+);
+Logger.fatal(
+  "This is a fatal message: {key}",
+  { key: "value" },
+  new Error("This is a fatal error")
+);
 ```
 
 3. Customize the logger with plugins:
 
 ```typescript
-
 Logger.configure()
-    .enrichWith(new UserAgentEnricher())
-    .enrichWith(new UrlEnricher())
-    .enrichWith(new CallerEnricher())
-    .formatUsing(new DefaultFormatter())
-    .minimumLevel("Information")
-    .writeTo(new ConsoleSink());
-
+  .enrichWith(new UserAgentEnricher())
+  .enrichWith(new UrlEnricher())
+  .enrichWith(new CallerEnricher())
+  .formatUsing(new DefaultFormatter())
+  .minimumLevel("Information")
+  .writeTo(new ConsoleSink());
 ```
+
 4. Or build your own plugins:
 
 ```typescript
-
-import { LogEventEnricher, LogEvent } from '@jacraig/woodchuck';
+import { LogEventEnricher, LogEvent } from "@jacraig/woodchuck";
 
 export class MyCustomPlugin implements LogEventEnricher {
-    public enrich(logEvent: LogEvent): void {
-        logEvent.properties["myProperty"] = "Something, something, something, dark side";
-    }
+  public enrich(logEvent: LogEvent): void {
+    logEvent.properties["myProperty"] =
+      "Something, something, something, dark side";
+  }
+}
+```
+
+# Additional Usage Examples
+
+## Multiple Sinks
+
+```typescript
+import {
+  Logger,
+  ConsoleSink,
+  BatchedSink,
+  BatchedSinkOptions,
+} from "@jacraig/woodchuck";
+
+Logger.configure()
+  .minimumLevel("Debug")
+  .writeTo(new ConsoleSink())
+  .writeTo(new BatchedSink(new ConsoleSink(), new BatchedSinkOptions()));
+```
+
+## Custom Enricher
+
+```typescript
+import { Logger, LogEventEnricher } from "@jacraig/woodchuck";
+
+class MyEnricher implements LogEventEnricher {
+  enrich(event) {
+    event.properties["custom"] = "myValue";
+  }
 }
 
+Logger.configure().enrichWith(new MyEnricher()).writeTo(new ConsoleSink());
+
+Logger.debug("With custom property");
+```
+
+## Custom Filter
+
+```typescript
+import { Logger, LogFilter } from "@jacraig/woodchuck";
+
+class OnlyErrorsFilter implements LogFilter {
+  filter(event) {
+    return event.level === "Error";
+  }
+}
+
+Logger.configure().filter(new OnlyErrorsFilter()).writeTo(new ConsoleSink());
+
+Logger.error("This will be logged");
+Logger.information("This will NOT be logged");
+```
+
+## Logging with Custom Properties
+
+```typescript
+Logger.information("User logged in", { userId: 123, userName: "alice" });
 ```
 
 # Contributing
+
 If you'd like to contribute to WoodChuck, please follow our [contribution guidelines](https://github.com/JaCraig/Woodchuck/blob/main/CONTRIBUTING.md).
 
 # License
+
 WoodChuck is licensed under the [Apache 2 License](https://github.com/JaCraig/Woodchuck/blob/main/LICENSE).

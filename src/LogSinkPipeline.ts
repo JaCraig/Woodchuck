@@ -71,14 +71,19 @@ export class LogSinkPipeline {
     // Processes a log event by filtering, enriching and formatting it before writing it to the sink
     // event: The log event to process
     public process(event: LogEvent): void {
-        this.formatter ??= new DefaultFormatter();
-        this.sink ??= new ConsoleSink();
-        let eventCopy: LogEvent = Object.assign({}, event) as LogEvent;
-        if (!this.filters.every(filter => filter.filter(eventCopy))) {
-            return;
+        try {
+            this.formatter ??= new DefaultFormatter();
+            this.sink ??= new ConsoleSink();
+            let eventCopy: LogEvent = Object.assign({}, event) as LogEvent;
+            if (!this.filters.every(filter => filter.filter(eventCopy))) {
+                return;
+            }
+            this.enrichers.forEach(enricher => enricher.enrich(eventCopy));
+            eventCopy.message = this.formatter.format(eventCopy) || eventCopy.message;
+            this.sink.write(eventCopy);
+        } catch (err) {
+            // Prevent a single pipeline failure from breaking the logger
+            console.error("LogSinkPipeline: Failed to process log event", err, event);
         }
-        this.enrichers.forEach(enricher => enricher.enrich(eventCopy));
-        eventCopy.message = this.formatter.format(eventCopy) || eventCopy.message;
-        this.sink.write(eventCopy);
     }
 }

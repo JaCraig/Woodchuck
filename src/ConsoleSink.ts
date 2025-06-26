@@ -22,17 +22,21 @@ export class ConsoleSink implements LogSink {
     // Writes a log event to the console
     // event: The log event to write
     public write(event: LogEvent): void {
-        let displayInlineArgs = (event.args && (typeof event.args != "object"));
-        let displayTableArgs = (event.args && (typeof event.args == "object"));
-        if(displayTableArgs) {
-            let shortenedMessage = event.message.length > 200 ? event.message.substring(0, 200) + "..." : event.message;
-            shortenedMessage = shortenedMessage.replace(/(\r\n|\n|\r)/gm, " ");
-            console.groupCollapsed(shortenedMessage);
-        }
-        this.consoleMethods[event.level]("%c" + event.message, this.styles[event.level], displayInlineArgs ? event.args : "");
-        if (displayTableArgs) {
-            console.table(event.args);
-            console.groupEnd();
+        try {
+            let displayInlineArgs = (event.args && (typeof event.args != "object"));
+            let displayTableArgs = (event.args && (typeof event.args == "object"));
+            if(displayTableArgs) {
+                let shortenedMessage = event.message.length > 200 ? event.message.substring(0, 200) + "..." : event.message;
+                shortenedMessage = shortenedMessage.replace(/(\r\n|\n|\r)/gm, " ");
+                console.groupCollapsed(shortenedMessage);
+            }
+            this.consoleMethods[event.level]("%c" + event.message, this.styles[event.level], displayInlineArgs ? event.args : "");
+            if (displayTableArgs) {
+                console.table(event.args);
+                console.groupEnd();
+            }
+        } catch (err) {
+            console.error("ConsoleSink: Failed to write log event", err, event);
         }
     }
 }

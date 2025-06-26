@@ -37,7 +37,7 @@ export class BatchedSink implements LogSink {
     private options: BatchedSinkOptions;
 
     // The timer to flush the buffer
-    private timer: number;
+    private timer: ReturnType<typeof setTimeout>;
 
     // flushes the buffer to the underlying sink
     private flush(): void {
@@ -45,7 +45,12 @@ export class BatchedSink implements LogSink {
             return;
         }
         for (let event of this.buffer) {
-            this.sink.write(event);
+            try {
+                this.sink.write(event);
+            } catch (err) {
+                // Optionally, you could push to a failed buffer or log to console
+                console.error("BatchedSink: Failed to write event to sink", err, event);
+            }
         }
         this.buffer = [];
     }
@@ -53,10 +58,14 @@ export class BatchedSink implements LogSink {
     // Writes a log event to the buffer
     // event: The log event to write
     public write(event: LogEvent): void {
-        this.buffer.push(event);
-        this.options.storage.setItem("logBuffer", JSON.stringify(this.buffer));
-        if (this.buffer.length >= this.options.maxBatchSize) {
-            this.flush();
+        try {
+            this.buffer.push(event);
+            this.options.storage.setItem("logBuffer", JSON.stringify(this.buffer));
+            if (this.buffer.length >= this.options.maxBatchSize) {
+                this.flush();
+            }
+        } catch (err) {
+            console.error("BatchedSink: Failed to buffer or persist event", err, event);
         }
     }
 }
