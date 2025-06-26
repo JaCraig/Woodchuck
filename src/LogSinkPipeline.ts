@@ -1,3 +1,14 @@
+/**
+ * LogSinkPipeline processes log events through filters, enrichers, and formatters before writing to a sink.
+ *
+ * Allows chaining configuration for sinks, filters, formatters, and enrichers.
+ * Each pipeline is associated with a LoggerConfiguration and can be customized independently.
+ *
+ * Example usage:
+ *   const pipeline = new LogSinkPipeline(config);
+ *   pipeline.writeTo(new ConsoleSink()).filter(myFilter).enrichWith(myEnricher);
+ */
+
 import { ConsoleSink } from "./ConsoleSink";
 import { DefaultFormatter } from "./DefaultFormatter";
 import { LogEvent } from "./LogEvent";
