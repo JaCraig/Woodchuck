@@ -54,19 +54,34 @@ export class ConsoleSink implements LogSink {
             ? event.message.substring(0, 200) + "..."
             : event.message;
         shortenedMessage = shortenedMessage.replace(/(\r\n|\n|\r)/gm, " ");
-        console.groupCollapsed(shortenedMessage);
+        if (typeof console.groupCollapsed === "function") {
+          console.groupCollapsed(shortenedMessage);
+        }
       }
-      this.consoleMethods[event.level](
-        "%c" + event.message,
-        this.styles[event.level],
-        displayInlineArgs ? event.args : ""
-      );
-      if (displayTableArgs) {
+      // Robust method lookup and fallback
+      const method =
+        this.consoleMethods[event.level] ||
+        ((msg: string, style: string, args: any) => {
+          if (typeof console.log === "function") {
+            console.log(msg, style, args);
+          }
+        });
+      // Only use styling if in browser, otherwise omit style
+      const isBrowser =
+        typeof window !== "undefined" &&
+        typeof window.navigator !== "undefined";
+      const style = isBrowser ? this.styles[event.level] : "";
+      method("%c" + event.message, style, displayInlineArgs ? event.args : "");
+      if (displayTableArgs && typeof console.table === "function") {
         console.table(event.args);
-        console.groupEnd();
+        if (typeof console.groupEnd === "function") {
+          console.groupEnd();
+        }
       }
     } catch (err) {
-      console.error("ConsoleSink: Failed to write log event", err, event);
+      if (typeof console.error === "function") {
+        console.error("ConsoleSink: Failed to write log event", err, event);
+      }
     }
   }
 }

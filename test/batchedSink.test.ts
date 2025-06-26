@@ -3,6 +3,12 @@ import { BatchedSinkOptions } from "../src/BatchedSinkOptions";
 import { LogEvent } from "../src/LogEvent";
 
 describe("BatchedSink", () => {
+  afterEach(() => {
+    // Clean up all timers after each test to prevent leaks
+    jest.useRealTimers();
+    jest.clearAllTimers();
+  });
+
   it("should buffer events and flush when maxBatchSize is reached", () => {
     const sink = { write: jest.fn() };
     const options = new BatchedSinkOptions();

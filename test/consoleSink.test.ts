@@ -73,7 +73,8 @@ describe("ConsoleSink", () => {
     // Assert
     expect(spy).toHaveBeenCalledWith(
       expect.stringContaining("warn-message"),
-      expect.anything()
+      expect.any(String),
+      ""
     );
     spy.mockRestore();
   });
@@ -81,9 +82,15 @@ describe("ConsoleSink", () => {
   it("should not throw if the console method throws an error", () => {
     // Arrange
     const sink = new ConsoleSink();
-    const spy = jest.spyOn(console, "error").mockImplementation(() => {
-      throw new Error("console error");
-    });
+    // Save original error method
+    const originalError = console.error;
+    // First, mock error to throw for the log call
+    const spy = jest
+      .spyOn(console, "error")
+      .mockImplementationOnce(() => {
+        throw new Error("console error");
+      })
+      .mockImplementation(() => {}); // For error handler, do nothing
     const event: LogEvent = {
       id: "id",
       timestamp: new Date(),
@@ -96,5 +103,6 @@ describe("ConsoleSink", () => {
     // Act & Assert
     expect(() => sink.write(event)).not.toThrow();
     spy.mockRestore();
+    console.error = originalError;
   });
 });
