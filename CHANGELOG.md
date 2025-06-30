@@ -1,3 +1,11 @@
+## [1.3.3](https://github.com/JaCraig/Woodchuck/compare/v1.3.2...v1.3.3) (2025-06-30)
+
+
+### Bug Fixes
+
+* bump @rollup/plugin-typescript from 12.1.3 to 12.1.4 ([c6f2dbd](https://github.com/JaCraig/Woodchuck/commit/c6f2dbd39ad90edde48bf13cdf4d404939837256))
+* bump rollup from 4.44.0 to 4.44.1 ([5064708](https://github.com/JaCraig/Woodchuck/commit/50647085054f57d9903d9f0d86aa02447436335b))
+
 ## [1.3.2](https://github.com/JaCraig/Woodchuck/compare/v1.3.1...v1.3.2) (2025-06-30)
 
 
