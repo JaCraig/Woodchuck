@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/JaCraig/Woodchuck/compare/v1.3.1...v1.3.2) (2025-06-30)
+
+
+### Bug Fixes
+
+* bump jest and @types/jest ([24498a2](https://github.com/JaCraig/Woodchuck/commit/24498a2834877aa99a8b64cbaed816f006579fbe))
+
 ## [1.3.1](https://github.com/JaCraig/Woodchuck/compare/v1.3.0...v1.3.1) (2025-06-30)
 
 
