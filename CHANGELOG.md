@@ -1,3 +1,10 @@
+## [1.3.14](https://github.com/JaCraig/Woodchuck/compare/v1.3.13...v1.3.14) (2025-08-04)
+
+
+### Bug Fixes
+
+* bump ts-jest from 29.4.0 to 29.4.1 ([5122a41](https://github.com/JaCraig/Woodchuck/commit/5122a412d4e15123fef3e885c3f338424207633e))
+
 ## [1.3.13](https://github.com/JaCraig/Woodchuck/compare/v1.3.12...v1.3.13) (2025-08-04)
 
 
