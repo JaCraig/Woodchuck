@@ -1,3 +1,11 @@
+## [1.3.15](https://github.com/JaCraig/Woodchuck/compare/v1.3.14...v1.3.15) (2025-08-04)
+
+
+### Bug Fixes
+
+* bump typedoc from 0.28.8 to 0.28.9 ([f48dd34](https://github.com/JaCraig/Woodchuck/commit/f48dd347e3e6fee8ba5be0b68d897c3feefb3261))
+* bump typescript from 5.8.3 to 5.9.2 ([d483579](https://github.com/JaCraig/Woodchuck/commit/d483579f014f8383bc9decd8219d344a6c7accc3))
+
 ## [1.3.14](https://github.com/JaCraig/Woodchuck/compare/v1.3.13...v1.3.14) (2025-08-04)
 
 
