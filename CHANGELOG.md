@@ -1,3 +1,10 @@
+## [1.3.26](https://github.com/JaCraig/Woodchuck/compare/v1.3.25...v1.3.26) (2025-09-08)
+
+
+### Bug Fixes
+
+* bump jest from 30.1.2 to 30.1.3 ([d18d265](https://github.com/JaCraig/Woodchuck/commit/d18d265064148b60cb49686bcfe2fcf6ebcc1a6a))
+
 ## [1.3.25](https://github.com/JaCraig/Woodchuck/compare/v1.3.24...v1.3.25) (2025-09-08)
 
 
