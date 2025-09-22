@@ -1,3 +1,12 @@
+## [1.3.31](https://github.com/JaCraig/Woodchuck/compare/v1.3.30...v1.3.31) (2025-09-22)
+
+
+### Bug Fixes
+
+* bump rollup from 4.50.2 to 4.52.0 ([fb5ee2a](https://github.com/JaCraig/Woodchuck/commit/fb5ee2a3fb2c8d08a530e09e4e3989e908417631))
+* bump semantic-release from 24.2.8 to 24.2.9 ([11cb2b6](https://github.com/JaCraig/Woodchuck/commit/11cb2b61e6b249ca02541ef41dc5e1d51974f3ae))
+* bump ts-jest from 29.4.1 to 29.4.4 ([33dd9bc](https://github.com/JaCraig/Woodchuck/commit/33dd9bc26319c97c4b37af8967098c74707aa309))
+
 ## [1.3.30](https://github.com/JaCraig/Woodchuck/compare/v1.3.29...v1.3.30) (2025-09-20)
 
 
