@@ -1,3 +1,12 @@
+## [1.3.40](https://github.com/JaCraig/Woodchuck/compare/v1.3.39...v1.3.40) (2025-11-10)
+
+
+### Bug Fixes
+
+* bump @semantic-release/github from 12.0.1 to 12.0.2 ([3c5f9cb](https://github.com/JaCraig/Woodchuck/commit/3c5f9cbccec464c042128f3ce1366ec039c3e7e8))
+* bump rollup from 4.52.5 to 4.53.2 ([93efced](https://github.com/JaCraig/Woodchuck/commit/93efced71d5d7bd3f0ddb3d50a5505d9a8389bf7))
+* bump semantic-release from 25.0.1 to 25.0.2 ([aea113e](https://github.com/JaCraig/Woodchuck/commit/aea113e2bee033c21424b7a0f8ba6b00917c47bd))
+
 ## [1.3.39](https://github.com/JaCraig/Woodchuck/compare/v1.3.38...v1.3.39) (2025-11-03)
 
 
