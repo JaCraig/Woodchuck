@@ -1,3 +1,10 @@
+## [1.3.41](https://github.com/JaCraig/Woodchuck/compare/v1.3.40...v1.3.41) (2025-11-18)
+
+
+### Bug Fixes
+
+* bump js-yaml in the npm_and_yarn group across 1 directory ([f08ecda](https://github.com/JaCraig/Woodchuck/commit/f08ecdaeb19f4467c8905047f07f92dd3798e4cd))
+
 ## [1.3.40](https://github.com/JaCraig/Woodchuck/compare/v1.3.39...v1.3.40) (2025-11-10)
 
 
