@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/JaCraig/Woodchuck/compare/v1.3.42...v1.4.0) (2025-11-26)
+
+
+### Bug Fixes
+
+* bump tar in the npm_and_yarn group across 1 directory ([f935d4e](https://github.com/JaCraig/Woodchuck/commit/f935d4e73265e060b4f551064acfb9af35e9ba73))
+
+
+### Features
+
+* **code-changes:** implement new functionality for enhanced performance ([dea613c](https://github.com/JaCraig/Woodchuck/commit/dea613c5fce0c0f98666abb1c371d332569775a4))
+
 ## [1.3.42](https://github.com/JaCraig/Woodchuck/compare/v1.3.41...v1.3.42) (2025-11-24)
 
 
