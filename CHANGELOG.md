@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/JaCraig/Woodchuck/compare/v1.4.0...v1.4.1) (2025-12-01)
+
+
+### Bug Fixes
+
+* bump ts-jest from 29.4.5 to 29.4.6 ([b6cb109](https://github.com/JaCraig/Woodchuck/commit/b6cb10952480b4e6d8f7774c32640ef9cf1bbfaf))
+* bump typedoc from 0.28.14 to 0.28.15 ([86d351b](https://github.com/JaCraig/Woodchuck/commit/86d351b7f9d490cc056807fb215bb3c95d5fc58e))
+
 # [1.4.0](https://github.com/JaCraig/Woodchuck/compare/v1.3.42...v1.4.0) (2025-11-26)
 
 
