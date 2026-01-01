@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/JaCraig/Woodchuck/compare/v1.4.3...v1.5.0) (2026-01-01)
+
+
+### Features
+
+* **logging:** add support for async sinks and improve flushing behavior ([13e81f9](https://github.com/JaCraig/Woodchuck/commit/13e81f975067e64a93042f46c110aa24dd7287f3))
+
 ## [1.4.3](https://github.com/JaCraig/Woodchuck/compare/v1.4.2...v1.4.3) (2025-12-22)
 
 
