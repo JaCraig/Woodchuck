@@ -91,7 +91,27 @@ export class LogSinkPipeline {
       }
       this.enrichers.forEach((enricher) => enricher.enrich(eventCopy));
       eventCopy.message = this.formatter.format(eventCopy) || eventCopy.message;
-      this.sink.write(eventCopy);
+      // Allow the sink to return a Promise for async sinks. If a Promise is returned, handle rejections to
+      // prevent unhandled promise rejections. Keep behavior non-blocking (fire-and-forget) to avoid breaking
+      // synchronous callers.
+      try {
+        const result = this.sink.write(eventCopy);
+        if (result && typeof (result as any).then === "function") {
+          (result as Promise<void>).catch((err) => {
+            console.error(
+              "LogSinkPipeline: Async sink failed to write log event",
+              err,
+              eventCopy
+            );
+          });
+        }
+      } catch (err) {
+        console.error(
+          "LogSinkPipeline: Failed to write log event",
+          err,
+          eventCopy
+        );
+      }
     } catch (err) {
       // Prevent a single pipeline failure from breaking the logger
       console.error("LogSinkPipeline: Failed to process log event", err, event);

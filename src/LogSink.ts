@@ -4,5 +4,6 @@ import { LogEvent } from "./LogEvent";
 export interface LogSink {
   // Writes a log event to the sink
   // event: The log event to write
-  write(event: LogEvent): void;
+  // The implementation may return a Promise for async sinks. Consumers should handle Promise rejections.
+  write(event: LogEvent): void | Promise<void>;
 }

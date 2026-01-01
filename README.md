@@ -90,6 +90,26 @@ Logger.configure()
   .writeTo(new BatchedSink(new ConsoleSink(), new BatchedSinkOptions()));
 ```
 
+## Async Sinks
+
+WoodChuck supports asynchronous sinks (e.g., HTTP or file sinks that return a Promise). Async sinks are treated as "fire-and-forget": the library will call the sink's `write` method, and if a Promise is returned it will attach an internal rejection handler so unhandled rejections do not propagate. This keeps the API non-blocking and backwards compatible with synchronous sinks.
+
+Example (pseudo HTTP sink):
+
+```typescript
+class HttpSink {
+  constructor(private url: string) {}
+  public write(event) {
+    // return a Promise so this sink runs asynchronously
+    return fetch(this.url, { method: "POST", body: JSON.stringify(event) });
+  }
+}
+
+Logger.configure().writeTo(new HttpSink("https://logs.example.com/ingest"));
+```
+
+When using `BatchedSink`, you can call `flush()` or `close()` to ensure buffered events are emitted before shutdown.
+
 ## Custom Enricher
 
 ```typescript

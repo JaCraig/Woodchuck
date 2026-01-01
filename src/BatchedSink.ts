@@ -53,19 +53,47 @@ export class BatchedSink implements LogSink {
   private timer: ReturnType<typeof setTimeout>;
 
   // flushes the buffer to the underlying sink
-  private flush(): void {
+  // Exposed as public to allow explicit flushing during shutdown
+  public flush(): void {
     if (this.buffer.length == 0) {
       return;
     }
     for (let event of this.buffer) {
       try {
-        this.sink.write(event);
+        const result = this.sink.write(event);
+        // If the underlying sink is async, attach a rejection handler so it doesn't become an unhandled rejection
+        if (result && typeof (result as any).then === "function") {
+          (result as Promise<void>).catch((err) => {
+            console.error(
+              "BatchedSink: Async sink failed to write event",
+              err,
+              event
+            );
+          });
+        }
       } catch (err) {
         // Optionally, you could push to a failed buffer or log to console
         console.error("BatchedSink: Failed to write event to sink", err, event);
       }
     }
     this.buffer = [];
+    try {
+      this.options.storage.setItem("logBuffer", JSON.stringify(this.buffer));
+    } catch (err) {
+      // Ignore storage set errors during flush
+    }
+  }
+
+  // Closes the batched sink, flushing remaining events and clearing timers
+  public close(): void {
+    if (this.timer) {
+      clearInterval(this.timer);
+    }
+    try {
+      this.flush();
+    } catch (err) {
+      console.error("BatchedSink: Failed to close properly", err);
+    }
   }
 
   // Writes a log event to the buffer
@@ -73,7 +101,11 @@ export class BatchedSink implements LogSink {
   public write(event: LogEvent): void {
     try {
       this.buffer.push(event);
-      this.options.storage.setItem("logBuffer", JSON.stringify(this.buffer));
+      try {
+        this.options.storage.setItem("logBuffer", JSON.stringify(this.buffer));
+      } catch (err) {
+        // Ignore storage errors while buffering
+      }
       if (this.buffer.length >= this.options.maxBatchSize) {
         this.flush();
       }
