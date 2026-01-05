@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/JaCraig/Woodchuck/compare/v1.5.0...v1.5.1) (2026-01-05)
+
+
+### Bug Fixes
+
+* bump rollup from 4.54.0 to 4.55.1 ([e894cc8](https://github.com/JaCraig/Woodchuck/commit/e894cc8911804abb1dd71ab8f9aa30bee70d575d))
+
 # [1.5.0](https://github.com/JaCraig/Woodchuck/compare/v1.4.3...v1.5.0) (2026-01-01)
 
 
