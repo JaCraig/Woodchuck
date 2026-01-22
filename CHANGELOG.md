@@ -1,3 +1,10 @@
+## [1.5.5](https://github.com/JaCraig/Woodchuck/compare/v1.5.4...v1.5.5) (2026-01-22)
+
+
+### Bug Fixes
+
+* bump lodash in the npm_and_yarn group across 1 directory ([201a282](https://github.com/JaCraig/Woodchuck/commit/201a2822aff1c2a21d790cede5e8bdfd9d0cddfd))
+
 ## [1.5.4](https://github.com/JaCraig/Woodchuck/compare/v1.5.3...v1.5.4) (2026-01-22)
 
 
