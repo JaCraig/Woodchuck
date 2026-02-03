@@ -1,3 +1,11 @@
+## [1.5.7](https://github.com/JaCraig/Woodchuck/compare/v1.5.6...v1.5.7) (2026-02-03)
+
+
+### Bug Fixes
+
+* bump rollup from 4.56.0 to 4.57.1 ([81bdc7a](https://github.com/JaCraig/Woodchuck/commit/81bdc7a7095052e2c6036ccbd615ba77f0341bc0))
+* bump semantic-release from 25.0.2 to 25.0.3 ([7084189](https://github.com/JaCraig/Woodchuck/commit/7084189ffcb66f72a82ca8bb48d9b97cf51d0c49))
+
 ## [1.5.6](https://github.com/JaCraig/Woodchuck/compare/v1.5.5...v1.5.6) (2026-01-26)
 
 
