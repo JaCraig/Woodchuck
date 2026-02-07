@@ -1,3 +1,10 @@
+## [1.5.9](https://github.com/JaCraig/Woodchuck/compare/v1.5.8...v1.5.9) (2026-02-07)
+
+
+### Bug Fixes
+
+* bump tar in the npm_and_yarn group across 1 directory ([c17abc2](https://github.com/JaCraig/Woodchuck/commit/c17abc260cadf64a1d74fc79f6228f0fadf1d7c5))
+
 ## [1.5.8](https://github.com/JaCraig/Woodchuck/compare/v1.5.7...v1.5.8) (2026-02-07)
 
 
