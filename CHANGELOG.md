@@ -1,3 +1,10 @@
+## [1.5.10](https://github.com/JaCraig/Woodchuck/compare/v1.5.9...v1.5.10) (2026-02-09)
+
+
+### Bug Fixes
+
+* bump @semantic-release/github from 12.0.3 to 12.0.5 ([c18ae4e](https://github.com/JaCraig/Woodchuck/commit/c18ae4e66889f7dc400906e1b71b3a6baa00517f))
+
 ## [1.5.9](https://github.com/JaCraig/Woodchuck/compare/v1.5.8...v1.5.9) (2026-02-07)
 
 
