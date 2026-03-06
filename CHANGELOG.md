@@ -1,3 +1,10 @@
+## [1.5.15](https://github.com/JaCraig/Woodchuck/compare/v1.5.14...v1.5.15) (2026-03-06)
+
+
+### Bug Fixes
+
+* bump serialize-javascript ([42b87a7](https://github.com/JaCraig/Woodchuck/commit/42b87a7491871d935fdfd2fcebaaea47ac09900c))
+
 ## [1.5.14](https://github.com/JaCraig/Woodchuck/compare/v1.5.13...v1.5.14) (2026-02-24)
 
 
