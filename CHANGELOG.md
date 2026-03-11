@@ -1,3 +1,10 @@
+## [1.5.16](https://github.com/JaCraig/Woodchuck/compare/v1.5.15...v1.5.16) (2026-03-11)
+
+
+### Bug Fixes
+
+* bump the npm_and_yarn group across 1 directory with 2 updates ([7b2a89a](https://github.com/JaCraig/Woodchuck/commit/7b2a89a71d2efc2eed5c120d7e41626d5c67894e))
+
 ## [1.5.15](https://github.com/JaCraig/Woodchuck/compare/v1.5.14...v1.5.15) (2026-03-06)
 
 
