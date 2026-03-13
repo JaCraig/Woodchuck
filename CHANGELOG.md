@@ -1,3 +1,10 @@
+## [1.5.17](https://github.com/JaCraig/Woodchuck/compare/v1.5.16...v1.5.17) (2026-03-13)
+
+
+### Bug Fixes
+
+* bump undici in the npm_and_yarn group across 1 directory ([11f23c1](https://github.com/JaCraig/Woodchuck/commit/11f23c12b70e11d1e470431b07481afe8d4180d2))
+
 ## [1.5.16](https://github.com/JaCraig/Woodchuck/compare/v1.5.15...v1.5.16) (2026-03-11)
 
 
