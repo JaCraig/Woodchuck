@@ -1,3 +1,10 @@
+## [1.5.18](https://github.com/JaCraig/Woodchuck/compare/v1.5.17...v1.5.18) (2026-03-16)
+
+
+### Bug Fixes
+
+* bump jest from 30.2.0 to 30.3.0 ([794a340](https://github.com/JaCraig/Woodchuck/commit/794a34082b097ba0c1e8f91e2557816519258f5f))
+
 ## [1.5.17](https://github.com/JaCraig/Woodchuck/compare/v1.5.16...v1.5.17) (2026-03-13)
 
 
