@@ -1,3 +1,13 @@
+## [1.5.19](https://github.com/JaCraig/Woodchuck/compare/v1.5.18...v1.5.19) (2026-03-25)
+
+
+### Bug Fixes
+
+* bump rollup from 4.59.0 to 4.60.0 ([eec06d3](https://github.com/JaCraig/Woodchuck/commit/eec06d3bd819149eb97a9f4a67e5761a5731895a))
+* bump typedoc from 0.28.17 to 0.28.18 ([799d321](https://github.com/JaCraig/Woodchuck/commit/799d3211ea029633ad2615f74280734cfa0452b6))
+* bump typescript from 5.9.3 to 6.0.2 ([b0abf7f](https://github.com/JaCraig/Woodchuck/commit/b0abf7f436e0b091c05c346851c16ec7c661fc98))
+* **dependencies:** update ts-jest and typescript versions ([3246d12](https://github.com/JaCraig/Woodchuck/commit/3246d12ec67d96698a8680d1aaaee202621c29cd))
+
 ## [1.5.18](https://github.com/JaCraig/Woodchuck/compare/v1.5.17...v1.5.18) (2026-03-16)
 
 
