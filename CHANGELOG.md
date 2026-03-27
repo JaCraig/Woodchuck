@@ -1,3 +1,10 @@
+## [1.5.20](https://github.com/JaCraig/Woodchuck/compare/v1.5.19...v1.5.20) (2026-03-27)
+
+
+### Bug Fixes
+
+* bump handlebars in the npm_and_yarn group across 1 directory ([df56159](https://github.com/JaCraig/Woodchuck/commit/df561596c831f530705e8bd96246ed55ddf7068f))
+
 ## [1.5.19](https://github.com/JaCraig/Woodchuck/compare/v1.5.18...v1.5.19) (2026-03-25)
 
 
