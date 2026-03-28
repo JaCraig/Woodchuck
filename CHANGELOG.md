@@ -1,3 +1,10 @@
+## [1.5.21](https://github.com/JaCraig/Woodchuck/compare/v1.5.20...v1.5.21) (2026-03-28)
+
+
+### Bug Fixes
+
+* **workflows:** refactor CI workflows and update dependencies ([3756a08](https://github.com/JaCraig/Woodchuck/commit/3756a08a3f37682cf145476fe7e9722e6f183a3c))
+
 ## [1.5.20](https://github.com/JaCraig/Woodchuck/compare/v1.5.19...v1.5.20) (2026-03-27)
 
 
