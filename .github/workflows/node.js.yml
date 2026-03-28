@@ -2,36 +2,17 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Test Pull Requests
+permissions:
+  contents: read
 
 on:
   pull_request:
     branches: ["main"]
 
-permissions:
-  contents: read
-  actions: read
+concurrency:
+  group: pr-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [24.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-      - uses: actions/checkout@v6
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test
-      - name: Upload test results
-        uses: actions/upload-artifact@v7
-        with:
-          name: dotnet-results-${{ matrix.node-version }}
-          path: TestResults-${{ matrix.node-version }}
+  review-dependabot-pr:
+    uses: JaCraig/Centralized-Workflows/.github/workflows/nodejs-test.yml@main

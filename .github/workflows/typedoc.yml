@@ -6,31 +6,23 @@ name: Document Site Publish
 on:
   push:
     branches: ["main"]
+    paths:
+      - "README.md"
+      - "src/**"
+      - "package.json"
+      - ".github/workflows/typedoc.yml"
+
+concurrency:
+  group: typedoc-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write
 
 jobs:
-  publish-docs:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [24.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-      - uses: actions/checkout@v6
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
-      - run: npx typedoc src/Logger.ts --readme ./README.md --out ./docs --commentStyle all
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: docs
+  review-dependabot-pr:
+    uses: JaCraig/Centralized-Workflows/.github/workflows/typedoc.yml@main
+    with:
+      entry-point: "src/Logger.ts"
+    secrets:
+      token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
