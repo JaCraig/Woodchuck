@@ -1,3 +1,10 @@
+## [1.5.22](https://github.com/JaCraig/Woodchuck/compare/v1.5.21...v1.5.22) (2026-04-01)
+
+
+### Bug Fixes
+
+* **package:** remove TypeScript override and update root directory ([084c1fd](https://github.com/JaCraig/Woodchuck/commit/084c1fde4d30e2086e20a34438f815fa8c21956b))
+
 ## [1.5.21](https://github.com/JaCraig/Woodchuck/compare/v1.5.20...v1.5.21) (2026-03-28)
 
 
