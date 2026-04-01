@@ -63,9 +63,6 @@
     "typedoc": "^0.28.0",
     "typescript": "^6.0.2"
   },
-  "overrides": {
-    "typescript": "$typescript"
-  },
   "release": {
     "branches": [
       "main"
