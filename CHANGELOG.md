@@ -1,3 +1,10 @@
+## [1.5.23](https://github.com/JaCraig/Woodchuck/compare/v1.5.22...v1.5.23) (2026-04-02)
+
+
+### Bug Fixes
+
+* bump lodash-es from 4.17.23 to 4.18.1 ([a69f243](https://github.com/JaCraig/Woodchuck/commit/a69f24365a910c1008508e567a650e6aabf56f0b))
+
 ## [1.5.22](https://github.com/JaCraig/Woodchuck/compare/v1.5.21...v1.5.22) (2026-04-01)
 
 
