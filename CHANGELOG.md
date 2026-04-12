@@ -1,3 +1,10 @@
+## [1.5.25](https://github.com/JaCraig/Woodchuck/compare/v1.5.24...v1.5.25) (2026-04-12)
+
+
+### Bug Fixes
+
+* bump typedoc from 0.28.18 to 0.28.19 in the dependencies group ([7f9a6db](https://github.com/JaCraig/Woodchuck/commit/7f9a6db2c11ec46276fa0ef44c11e9dfa7ceaf72))
+
 ## [1.5.24](https://github.com/JaCraig/Woodchuck/compare/v1.5.23...v1.5.24) (2026-04-02)
 
 
