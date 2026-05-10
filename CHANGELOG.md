@@ -1,3 +1,10 @@
+## [1.5.27](https://github.com/JaCraig/Woodchuck/compare/v1.5.26...v1.5.27) (2026-05-10)
+
+
+### Bug Fixes
+
+* bump the dependencies group with 3 updates ([a06658c](https://github.com/JaCraig/Woodchuck/commit/a06658c56b671ebd7762837874dead2a3684ed33))
+
 ## [1.5.26](https://github.com/JaCraig/Woodchuck/compare/v1.5.25...v1.5.26) (2026-04-19)
 
 
