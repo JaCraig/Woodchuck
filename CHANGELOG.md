@@ -1,3 +1,10 @@
+## [1.5.28](https://github.com/JaCraig/Woodchuck/compare/v1.5.27...v1.5.28) (2026-05-17)
+
+
+### Bug Fixes
+
+* bump rollup from 4.60.3 to 4.60.4 in the dependencies group ([c511a1e](https://github.com/JaCraig/Woodchuck/commit/c511a1e3b2d398a22d01b4f4b3a1caaab79d42a0))
+
 ## [1.5.27](https://github.com/JaCraig/Woodchuck/compare/v1.5.26...v1.5.27) (2026-05-10)
 
 
