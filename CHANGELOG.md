@@ -1,3 +1,10 @@
+## [1.5.29](https://github.com/JaCraig/Woodchuck/compare/v1.5.28...v1.5.29) (2026-05-21)
+
+
+### Bug Fixes
+
+* **workflow:** update node-publish.yml for npm token removal ([0f231b1](https://github.com/JaCraig/Woodchuck/commit/0f231b1c7c8bb3180ba1c8d70159f6506e347ec8))
+
 ## [1.5.28](https://github.com/JaCraig/Woodchuck/compare/v1.5.27...v1.5.28) (2026-05-17)
 
 
