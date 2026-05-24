@@ -1,3 +1,10 @@
+## [1.5.30](https://github.com/JaCraig/Woodchuck/compare/v1.5.29...v1.5.30) (2026-05-24)
+
+
+### Bug Fixes
+
+* bump ts-jest from 29.4.9 to 29.4.11 in the dependencies group ([2ddb81c](https://github.com/JaCraig/Woodchuck/commit/2ddb81c31a49643b7993feada2247db989240b9f))
+
 ## [1.5.29](https://github.com/JaCraig/Woodchuck/compare/v1.5.28...v1.5.29) (2026-05-21)
 
 
