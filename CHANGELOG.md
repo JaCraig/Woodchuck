@@ -1,3 +1,10 @@
+## [1.5.31](https://github.com/JaCraig/Woodchuck/compare/v1.5.30...v1.5.31) (2026-05-28)
+
+
+### Bug Fixes
+
+* **workflows:** remove personal access token from workflows ([73dde84](https://github.com/JaCraig/Woodchuck/commit/73dde847ef80cf2310a701739171f7e6895db6f7))
+
 ## [1.5.30](https://github.com/JaCraig/Woodchuck/compare/v1.5.29...v1.5.30) (2026-05-24)
 
 
