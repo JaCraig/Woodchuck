@@ -35,28 +35,20 @@ Logger.verbose("This is a verbose message: {key}", { key: "value" });
 Logger.debug("This is a debug message: {key}", { key: "value" });
 Logger.information("This is an information message: {key}", { key: "value" });
 Logger.warning("This is a warning message: {key}", { key: "value" });
-Logger.error(
-  "This is an error message: {key}",
-  { key: "value" },
-  new Error("This is an error")
-);
-Logger.fatal(
-  "This is a fatal message: {key}",
-  { key: "value" },
-  new Error("This is a fatal error")
-);
+Logger.error("This is an error message: {key}", { key: "value" }, new Error("This is an error"));
+Logger.fatal("This is a fatal message: {key}", { key: "value" }, new Error("This is a fatal error"));
 ```
 
 3. Customize the logger with plugins:
 
 ```typescript
 Logger.configure()
-  .enrichWith(new UserAgentEnricher())
-  .enrichWith(new UrlEnricher())
-  .enrichWith(new CallerEnricher())
-  .formatUsing(new DefaultFormatter())
-  .minimumLevel("Information")
-  .writeTo(new ConsoleSink());
+    .enrichWith(new UserAgentEnricher())
+    .enrichWith(new UrlEnricher())
+    .enrichWith(new CallerEnricher())
+    .formatUsing(new DefaultFormatter())
+    .minimumLevel("Information")
+    .writeTo(new ConsoleSink());
 ```
 
 4. Or build your own plugins:
@@ -65,10 +57,9 @@ Logger.configure()
 import { LogEventEnricher, LogEvent } from "@jacraig/woodchuck";
 
 export class MyCustomPlugin implements LogEventEnricher {
-  public enrich(logEvent: LogEvent): void {
-    logEvent.properties["myProperty"] =
-      "Something, something, something, dark side";
-  }
+    public enrich(logEvent: LogEvent): void {
+        logEvent.properties["myProperty"] = "Something, something, something, dark side";
+    }
 }
 ```
 
@@ -77,17 +68,12 @@ export class MyCustomPlugin implements LogEventEnricher {
 ## Multiple Sinks
 
 ```typescript
-import {
-  Logger,
-  ConsoleSink,
-  BatchedSink,
-  BatchedSinkOptions,
-} from "@jacraig/woodchuck";
+import { Logger, ConsoleSink, BatchedSink, BatchedSinkOptions } from "@jacraig/woodchuck";
 
 Logger.configure()
-  .minimumLevel("Debug")
-  .writeTo(new ConsoleSink())
-  .writeTo(new BatchedSink(new ConsoleSink(), new BatchedSinkOptions()));
+    .minimumLevel("Debug")
+    .writeTo(new ConsoleSink())
+    .writeTo(new BatchedSink(new ConsoleSink(), new BatchedSinkOptions()));
 ```
 
 ## Async Sinks
@@ -98,11 +84,11 @@ Example (pseudo HTTP sink):
 
 ```typescript
 class HttpSink {
-  constructor(private url: string) {}
-  public write(event) {
-    // return a Promise so this sink runs asynchronously
-    return fetch(this.url, { method: "POST", body: JSON.stringify(event) });
-  }
+    constructor(private url: string) {}
+    public write(event) {
+        // return a Promise so this sink runs asynchronously
+        return fetch(this.url, { method: "POST", body: JSON.stringify(event) });
+    }
 }
 
 Logger.configure().writeTo(new HttpSink("https://logs.example.com/ingest"));
@@ -116,9 +102,9 @@ When using `BatchedSink`, you can call `flush()` or `close()` to ensure buffered
 import { Logger, LogEventEnricher } from "@jacraig/woodchuck";
 
 class MyEnricher implements LogEventEnricher {
-  enrich(event) {
-    event.properties["custom"] = "myValue";
-  }
+    enrich(event) {
+        event.properties["custom"] = "myValue";
+    }
 }
 
 Logger.configure().enrichWith(new MyEnricher()).writeTo(new ConsoleSink());
@@ -132,9 +118,9 @@ Logger.debug("With custom property");
 import { Logger, LogFilter } from "@jacraig/woodchuck";
 
 class OnlyErrorsFilter implements LogFilter {
-  filter(event) {
-    return event.level === "Error";
-  }
+    filter(event) {
+        return event.level === "Error";
+    }
 }
 
 Logger.configure().filter(new OnlyErrorsFilter()).writeTo(new ConsoleSink());
