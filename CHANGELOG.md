@@ -1,3 +1,27 @@
+## [1.5.32](https://github.com/JaCraig/Woodchuck/compare/v1.5.31...v1.5.32) (2026-09-20)
+
+
+### Bug Fixes
+
+* bump @babel/core from 7.29.0 to 7.29.7 ([fe5bf7c](https://github.com/JaCraig/Woodchuck/commit/fe5bf7c513a0d95547b2a73c3d4b596f2eebf9fb))
+* bump @semantic-release/github in the dependencies group ([72a8af0](https://github.com/JaCraig/Woodchuck/commit/72a8af0b135f93dac9ca493b9f6878becfa3451f))
+* bump brace-expansion from 1.1.13 to 1.1.18 ([0528d8b](https://github.com/JaCraig/Woodchuck/commit/0528d8b5ed75f90e91a923fe065e8a6dccce6647))
+* bump js-yaml from 4.1.1 to 4.3.2 ([fff77c1](https://github.com/JaCraig/Woodchuck/commit/fff77c1a999f7dd17f40909d0523be7e79f806fc))
+* bump markdown-it from 14.1.1 to 14.2.0 ([1da408b](https://github.com/JaCraig/Woodchuck/commit/1da408bd12e24c1dd498fc4f58d9f49dbc7575a6))
+* bump rollup from 4.60.4 to 4.61.1 in the dependencies group ([c3cb422](https://github.com/JaCraig/Woodchuck/commit/c3cb4226334c90c6dd6c319ea97741e4d970c5d4))
+* bump rollup from 4.62.0 to 4.62.2 in the dependencies group ([66e9257](https://github.com/JaCraig/Woodchuck/commit/66e9257665ffd9e1cfbec675ea7424f21737df77))
+* bump rollup from 4.62.4 to 4.62.5 in the dependencies group ([190350d](https://github.com/JaCraig/Woodchuck/commit/190350db2d756d2edc64c2f0861cd9547d401dc1))
+* bump rollup from 4.62.5 to 4.63.0 in the dependencies group ([e677ab8](https://github.com/JaCraig/Woodchuck/commit/e677ab82edc616c887dac7f9a2587bd4c5071f3a))
+* bump rollup from 4.63.1 to 4.63.3 in the dependencies group ([5bcf799](https://github.com/JaCraig/Woodchuck/commit/5bcf7996593aeea966b4294fe588c828c48d93f8))
+* bump semantic-release in the dependencies group ([11e1cde](https://github.com/JaCraig/Woodchuck/commit/11e1cde8b0b3ab57ec7d4f5e87ad44f18122808f))
+* bump the dependencies group with 2 updates ([b8a9ba4](https://github.com/JaCraig/Woodchuck/commit/b8a9ba40a1b04acec57670c8c5b45a0e77a0d9f4))
+* bump the dependencies group with 2 updates ([e094c2b](https://github.com/JaCraig/Woodchuck/commit/e094c2b2640841f2a449051035fcae38096f5364))
+* bump the dependencies group with 2 updates ([a547b34](https://github.com/JaCraig/Woodchuck/commit/a547b343daaceb860c93d0a1100e060be5518473))
+* bump the dependencies group with 3 updates ([ae19ab2](https://github.com/JaCraig/Woodchuck/commit/ae19ab267a9bda3cfe81f433e2c8a0a53d4d677f))
+* bump the dependencies group with 4 updates ([26c4ece](https://github.com/JaCraig/Woodchuck/commit/26c4ece19fc392da6a89beaf316c43cf950da90f))
+* bump undici from 6.24.1 to 6.27.0 ([04e3847](https://github.com/JaCraig/Woodchuck/commit/04e3847e24b9e325fe1ef3b96a252cfad898ff1f))
+* bump undici from 6.27.0 to 6.28.0 ([ede9603](https://github.com/JaCraig/Woodchuck/commit/ede96030845da5bdaa29cca3cf896d33c0d97f6f))
+
 ## [1.5.31](https://github.com/JaCraig/Woodchuck/compare/v1.5.30...v1.5.31) (2026-05-28)
 
 
