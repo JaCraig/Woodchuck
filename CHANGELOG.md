@@ -1,3 +1,10 @@
+## [1.5.33](https://github.com/JaCraig/Woodchuck/compare/v1.5.32...v1.5.33) (2026-09-25)
+
+
+### Bug Fixes
+
+* **dependabot:** update typescript ignore rule ([78e6137](https://github.com/JaCraig/Woodchuck/commit/78e6137b8f66859194ddbd6439233d3daed576f8))
+
 ## [1.5.32](https://github.com/JaCraig/Woodchuck/compare/v1.5.31...v1.5.32) (2026-09-20)
 
 
